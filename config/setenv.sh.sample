@@ -1,6 +1,6 @@
 # Sample for local/dev. Put real values only on the server: /opt/tomcat9/bin/setenv.sh
 
-export DB_URL="jdbc:mysql://<RDS_ENDPOINT>:3306/todoApp?sslMode=REQUIRED&serverTimezone=Asia/Tokyo&useUnicode=true&characterEncoding=UTF-8"
-export DB_USER="app_user"      # or <DB_USER>
-export DB_PASS="REPLACE_ME"    # set only on server
+export DB_URL="jdbc:mysql://todoapp-db.chqia2essngh.ap-northeast-1.rds.amazonaws.com:3306/todoApp?sslMode=REQUIRED&serverTimezone=Asia/Tokyo&useUnicode=true&characterEncoding=UTF-8"
+export DB_USER="Asahi_117"      
+export DB_PASS="REPLACE_ME"    
 export CATALINA_OPTS="-Xms256m -Xmx512m -Duser.timezone=Asia/Tokyo"
