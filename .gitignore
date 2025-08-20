@@ -1,0 +1,20 @@
+app/target/
+**/*.war
+**/*.class
+
+# WEB-INF に手置きしない前提（置いてたら消す）
+app/src/main/webapp/WEB-INF/lib/
+
+# IDE
+.project
+.classpath
+.settings/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+
+# Secrets（実ファイルは絶対コミットしない）
+config/setenv.sh
+*.pem *.key *.p12 *.jks *.env

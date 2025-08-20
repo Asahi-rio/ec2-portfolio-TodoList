@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* ベース設定 */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ヘッダーの中のリンクを右上に */
+header ,footer{
+  position: relative;
+  background-color: #f26c00;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-right a {
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+footer {
+  color: white;
+  text-align: center;     /* ← 中央寄せ */
+  padding: 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center; /* ← 横方向中央寄せ */
+  align-items: center;     /* ← 高さ方向中央寄せ（必要なら） */
+}
+
+/* メインの全体構成 */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;     /* 左右中央寄せ */
+  align-items: center;         /* 縦方向中央寄せ */
+  gap: 60px;                   /* 左右の距離を狭める */
+}
+
+/****マイページ*******/
+
+/* 左側：タイトル＋やること */
+.left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-box h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* やることリストボックス */
+.todo-box {
+  border: 1px solid black;
+  padding: 20px;
+  width: 300px;      /* ← 横幅を広げた */
+  height: 400px;     /* ← 高さも拡大 */
+  font-size: 22px;   /* ← 文字も少し大きく */
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* 右側ボタン全体を左の高さに合わせて等間隔に配置 */
+.right-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ← 等間隔で配置 */
+  align-items: center;
+  height: 350px;  /* ← 高さを縮めて間隔を詰める */
+}
+
+.button {
+  width: 200px;
+  padding: 18px;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;   /* ← 下線を消す */
+  text-align: center;      /* ← 文字を中央に寄せる */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yellow {
+  background-color: #ffb800;
+  color: black;
+}
+
+.btn-red {
+  background-color: #e60000;
+  color: white;
+}
+
+/* ==== ログイン画面、会員登録画面用 ==== */
+
+/* フォーム全体 */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 20px;
+  font-size: 18px;
+}
+
+/* ラベルとフォームの間隔を縮める */
+.form label {
+  margin-bottom: -7px; /* ← 下の余白を小さく設定 */
+}
+
+/* 入力欄 */
+.form input {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+/* 注意書き */
+.note {
+  font-size: 14px;
+  color: #666;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+/* ログインボタン */
+.login-button {
+  width: 200px;
+  align-self: center;
+  padding: 12px 0;
+  font-size: 18px;
+  background-color: #00aaff;
+  color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* === やること登録画面専用（Schedule.html） === */
+
+.mainschedule {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ← 中央から上寄せに変更 */
+  padding-top: 40px;       /* ← 必要なだけの上余白を指定 */
+  padding-bottom: 40px;    /* ← 下も少し空けてバランス調整 */
+  box-sizing: border-box;
+}
+
+/* フォーム全体 */
+.mainschedule .form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 20px;
+  font-size: 18px;
+}
+
+/* 入力欄とテキストエリア */
+.mainschedule .form input,
+.mainschedule .form textarea {
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ▼ 予定日セレクトボックスを横並び＆均等サイズに */
+.mainschedule .form .schedule-row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.mainschedule .form .schedule-select {
+  width: 150px;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* ボタン全般 */
+.mainschedule .form .button {
+  width: 200px;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 登録ボタン色 */
+.mainschedule .form .btn-yellow {
+  background-color: #ffb800;
+  color: black;
+}
+
+/* 戻るボタン色 */
+.mainschedule .form .btn-blue {
+  background-color: #00aaff;
+  color: white;
+}
+
+/* ボタン配置調整（オプション） */
+.mainschedule .form .button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* ==== やること一覧画面専用スタイル ==== */
+
+/* メインレイアウト */
+.mainlist {
+  display: block;                /* Flexを解除して横幅制限をなくす */
+  padding: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;             /* 必要なら調整可 */
+  margin: 0 auto;                /* 中央寄せ */
+}
+/* =========================
+   テーブル全体のスタイル
+========================= */
+.task-table {
+  width: 95%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid black;
+  table-layout: fixed;
+}
+
+/* テーブル見出し */
+.task-table th {
+  background-color: #ffb800;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+/* テーブルデータ */
+.task-table td {
+  border: 2px solid black;
+  padding: 8px;
+  vertical-align: middle;
+  word-wrap: break-word; /* 長文対策 */
+}
+
+/* ===== 各列の幅を割合で指定 ===== */
+.task-table th:nth-child(1),
+.task-table td:nth-child(1) {
+  width: 60%;  /* やること */
+  text-align: left;
+  padding-left: 20px;
+}
+
+.task-table th:nth-child(2),
+.task-table td:nth-child(2) {
+  width: 27%;  /* 日程 */
+}
+
+.task-table th:nth-child(3),
+.task-table td:nth-child(3),
+.task-table th:nth-child(4),
+.task-table td:nth-child(4) {
+  width: 14%;  /* 詳細／削除 */
+}
+
+/* =========================
+   ボタン共通スタイル
+========================= */
+.task-table .button {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%; /* 列にぴったりおさまるように */
+}
+
+/* ボタン色 */
+.btn-blue {
+  background-color: #00aaff;
+  color: white;
+}
+
+.btn-red {
+  background-color: #e60000;
+  color: white;
+}
+
+/* =========================
+   戻るボタンエリア
+========================= */
+.button-area {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.button-area .back-button {
+  background-color: #00aaff;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+/* === 詳細ページ専用スタイル（DetailPage.jsp） === */
+.detail-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 18px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.detail-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.detail-text {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.detail-text.multiline {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.detail-button-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+
+.detail-box {
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* 改行を反映 */
+}
+
+
