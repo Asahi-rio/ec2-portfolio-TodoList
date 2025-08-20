@@ -2,7 +2,7 @@ app/target/
 **/*.war
 **/*.class
 
-# WEB-INF に手置きしない前提（置いてたら消す）
+# WEB-INF に手置きしない前提
 app/src/main/webapp/WEB-INF/lib/
 
 # IDE
@@ -15,6 +15,6 @@ app/src/main/webapp/WEB-INF/lib/
 # OS
 .DS_Store
 
-# Secrets（実ファイルは絶対コミットしない）
+# Secrets
 config/setenv.sh
 *.pem *.key *.p12 *.jks *.env
