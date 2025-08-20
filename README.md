@@ -1,3 +1,6 @@
+## 制作の目的
+
+
 
 ## ディレクトリ
 ec2-portfolio-TodoList/
@@ -34,4 +37,4 @@ ec2-portfolio-TodoList/
 | ├─ schema.sql
 | └─ seed_sample.sql
 └─ config/
-|└─ setenv.sh.sample
+└─ setenv.sh.sample
