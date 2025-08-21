@@ -24,7 +24,6 @@
 ---
 
 ## ディレクトリ
-```plaintext
 ec2-portfolio-TodoList/
 ├─ app/
 │  ├─ pom.xml
