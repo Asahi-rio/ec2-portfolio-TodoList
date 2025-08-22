@@ -19,7 +19,12 @@
   VPC分離・ALB冗長化・最小限のセキュリティグループ設定を実際に構築し、実務で必要な知識を習得するため。  
 
 - **幅広いスキルの習得**  
-  アプリ開発だけでなく、Linux環境でのミドルウェア設定やAWSサービスの組み合わせを経験するため。  
+  アプリ開発だけでなく、Linux環境でのミドルウェア設定やAWSサービスの組み合わせを経験するため。
+
+---
+
+### アーキテクチャ図
+[TodoList.pdf](https://github.com/user-attachments/files/21928272/TodoList.pdf)
 
 ---
 
@@ -59,6 +64,7 @@ ec2-portfolio-TodoList/
 │  └─ seed_sample.sql
 └─ config/
    └─ setenv.sh.sample
+
 
 ## 工夫した点
 - **可用性を意識した構成**  
